@@ -3,8 +3,8 @@
     public interface IDrinkService
     {
         List<DrinkItemDto> GetDrinkItemDtos();
+        bool DeleteDrinkItem(int id);
         void AddDrinkItem(AddDrinkDto drinkItemDto);
-        bool UpdateDrinkItem(string name, UpdateDrinkDto drinkItemDto);
-        bool DeleteDrinkItem(string name);
+        bool UpdateDrinkItem(int id, UpdateDrinkDto drinkItemDto);
     }
 }

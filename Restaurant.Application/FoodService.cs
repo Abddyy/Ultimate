@@ -4,34 +4,32 @@ using Restaurant.Domain;
 
 public class FoodService : IFoodService
 {
+    private int _nextId = 1;
     private readonly IMapper _mapper;
     private List<FoodItem> _foodItems = new List<FoodItem>();
-    private int _nextId = 1;
 
     public FoodService(IMapper mapper)
     {
         _mapper = mapper;
-        // Seed with initial data
-        _foodItems.Add(new FoodItem(1, "burger", 30) { Id = _nextId++ });
-        _foodItems.Add(new FoodItem(2, "pizza", 50) { Id = _nextId++ });
-        _foodItems.Add(new FoodItem(3, "falafel", 4) { Id = _nextId++ });
+        _foodItems.Add(new FoodItem { Id = _nextId++, Name = "Burger", Price = 30 });
+        _foodItems.Add(new FoodItem { Id = _nextId++, Name = "Pizza", Price = 50 });
+        _foodItems.Add(new FoodItem { Id = _nextId++, Name = "Falafel", Price = 4 });
     }
 
     public List<FoodItemDto> GetFoodItems()
     {
         return _mapper.Map<List<FoodItemDto>>(_foodItems);
     }
-
     public void AddFoodItem(AddFoodDto foodItemDto)
     {
         var foodItem = _mapper.Map<FoodItem>(foodItemDto);
-        foodItem.Id = _nextId++; // Set a new unique Id
+        foodItem.Id = _nextId++;
         _foodItems.Add(foodItem);
     }
 
-    public bool DeleteFoodItem(string name)
+    public bool DeleteFoodItem(int id)
     {
-        var item = _foodItems.FirstOrDefault(f => f.Name == name && !f.IsDeleted);
+        var item = _foodItems.FirstOrDefault(f => f.Id == id && !f.IsDeleted);
         if (item == null)
         {
             return false;
@@ -42,9 +40,9 @@ public class FoodService : IFoodService
         return true;
     }
 
-    public bool UpdateFoodItem(string name, UpdateFoodDto updatedFoodItemDto)
+    public bool UpdateFoodItem(int id, UpdateFoodDto updatedFoodItemDto)
     {
-        var item = _foodItems.FirstOrDefault(f => f.Name == name && !f.IsDeleted);
+        var item = _foodItems.FirstOrDefault(f => f.Id == id && !f.IsDeleted);
         if (item == null)
         {
             return false;
