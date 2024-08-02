@@ -1,0 +1,11 @@
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\bin\Debug\net8.0\Domain.Contracts.deps.json
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\bin\Debug\net8.0\Domain.Contracts.dll
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\bin\Debug\net8.0\Domain.Contracts.pdb
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\obj\Debug\net8.0\Domain.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\obj\Debug\net8.0\Domain.Contracts.AssemblyInfoInputs.cache
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\obj\Debug\net8.0\Domain.Contracts.AssemblyInfo.cs
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\obj\Debug\net8.0\Domain.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\obj\Debug\net8.0\Domain.Contracts.dll
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\obj\Debug\net8.0\refint\Domain.Contracts.dll
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\obj\Debug\net8.0\Domain.Contracts.pdb
+C:\Users\Abdallah\source\repos\Restaurant\Domain.Contracts\obj\Debug\net8.0\ref\Domain.Contracts.dll
